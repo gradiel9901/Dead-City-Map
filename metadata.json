@@ -1,0 +1,9 @@
+{
+  "name": "Dead City — Tactical Map & Horde Mode Simulator",
+  "description": "Interactive tactical level design visualization, horde wave simulator, co-op mission playback, and fairness analyzer for the Dead City co-op shooter map.",
+  "prompt": "Dead City Horde Mode Interactive Level Map and Tactical Simulator",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ],
+  "permissions": []
+}

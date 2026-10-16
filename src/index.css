@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0B1424;
+  --panel: #0F1E33;
+  --panel-2: #14263F;
+  --line: #2A3F5C;
+  --ink: #E8EEF6;
+  --muted: #8FA3BC;
+  --yellow: #FFD21F;
+  --red: #E5202A;
+  --cyan: #1EAEEF;
+  --green: #2ECC40;
+}
+
+body {
+  font-family: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  user-select: none;
+}
+
+.font-condensed {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.font-mono-numbers {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Tactical Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1424;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A3F5C;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3B557C;
+}
+
+/* Tactical Vignette & Grid Effects */
+.tactical-vignette {
+  box-shadow: inset 0 0 100px rgba(11, 20, 36, 0.85);
+  pointer-events: none;
+}
+
+.tactical-grid-bg {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(42, 63, 92, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(42, 63, 92, 0.15) 1px, transparent 1px);
+}
+
+/* Pulse animations for tactical radar & warnings */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes tactical-pulse-red {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.15); }
+}
+
+@keyframes tactical-pulse-green {
+  0%, 100% { opacity: 0.95; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.1); }
+}
+
+.animate-pulse-red {
+  animation: tactical-pulse-red 2s infinite ease-in-out;
+}
+
+.animate-pulse-green {
+  animation: tactical-pulse-green 1.5s infinite ease-in-out;
+}
